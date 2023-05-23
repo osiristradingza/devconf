@@ -32,10 +32,11 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const title = to.meta.title;
   const { params } = to;
+  // @ts-ignore
   if (title) document.title = title;
   if (params.id) {
     const career = dataJobs.find(({ key }) => params.id === key);
-    if (career.title) document.title = `${career.company} - ${career.title}`;
+    if (career?.title) document.title = `${career.company} - ${career.title}`;
   }
   next();
 });
