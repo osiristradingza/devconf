@@ -84,25 +84,38 @@ onMounted(() => window.addEventListener("resize", () => calculateTop()));
         <p>All rights reserved 2023</p>
       </div>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center p-4">
-      <a class="text-white" href="https://www.betway.co.za/"
-        >www.betway.co.za</a
-      >
-      <a class="text-white" href="https://www.betway.co.tz/?nogeoredirect=1"
-        >www.betway.co.tz</a
-      >
-      <a class="text-white" href="https://www.betway.co.mz/?nogeoredirect=1"
-        >www.betway.co.mz</a
-      >
-      <a class="text-white" href="https://www.betway.com.gh/?nogeoredirect=1"
-        >www.betway.com.gh</a
-      >
-      <a class="text-white" href="https://www.betway.com.ng/?nogeoredirect=1"
-        >www.betway.com.ng</a
-      >
-      <a class="text-white" href="https://www.betway.co.zm/?nogeoredirect=1"
-        >www.betway.co.zm</a
-      >
+    <div class="w-11/12 md:w-4/5 mx-auto">
+      <h1 class="text-2xl font-bold text-white">Some of our sites:</h1>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 text-left p-4">
+        <a class="text-white" href="https://www.betway.co.za/"
+          >www.betway.co.za</a
+        >
+        <a class="text-white" href="https://www.betway.co.tz/?nogeoredirect=1"
+          >www.betway.co.tz</a
+        >
+        <a class="text-white" href="https://www.betway.co.mz/?nogeoredirect=1"
+          >www.betway.co.mz</a
+        >
+        <a class="text-white" href="https://www.betway.com.gh/?nogeoredirect=1"
+          >www.betway.com.gh</a
+        >
+        <a class="text-white" href="https://www.betway.com.ng/?nogeoredirect=1"
+          >www.betway.com.ng</a
+        >
+        <a class="text-white" href="https://www.betway.co.zm/?nogeoredirect=1"
+          >www.betway.co.zm</a
+        >
+      </div>
+    </div>
+    <div class="w-11/12 md:w-4/5 mx-auto">
+      <h1 class="text-2xl font-bold text-white text-center">
+        <img
+          class="object-contain w-full h-10"
+          src="../../assets/devconf.png"
+          alt=""
+        />
+        Looking forward to seeing you at Devconf 2023!
+      </h1>
     </div>
   </div>
 </template>

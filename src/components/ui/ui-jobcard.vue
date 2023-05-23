@@ -24,10 +24,11 @@ const navigateToJob = (job: any) => {
 };
 </script>
 <template>
-  <div class="text-white border" @click="navigateToJob(props.job)">
-    <div
-      class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden border-white border-solid"
-    >
+  <div
+    class="text-white border hover:cursor-pointer hover:bg-white/30 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden border-white border-solid"
+    @click="navigateToJob(props.job)"
+  >
+    <div class="h-full">
       <div class="p-6">
         <h2
           class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"

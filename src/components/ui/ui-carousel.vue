@@ -9,6 +9,9 @@
       768: {
         slidesPerView: 3,
       },
+      320: {
+        slidesPerView: 1.5,
+      },
     }"
     @progress="onProgress"
     @slidechange="onSlideChange"
@@ -54,10 +57,7 @@ onMounted(() => {
 const spaceBetween = 10;
 const onProgress = (e) => {
   const [swiper, progress] = e.detail;
-  console.log(progress);
 };
 
-const onSlideChange = (e) => {
-  console.log("slide changed");
-};
+const onSlideChange = (e) => {};
 </script>

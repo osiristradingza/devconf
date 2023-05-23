@@ -23,7 +23,7 @@
         </svg>
       </div>
       <div>
-        <div class="text-2xl font-black text-white"><slot /></div>
+        <div class="text-2xl font-black text-white line-clamp-1"><slot /></div>
         <div class="font-bold text-white"><slot name="company" /></div>
       </div>
     </div>

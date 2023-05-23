@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import { dataJobs } from "@/assets/data/data-jobs";
+import { data } from "autoprefixer";
 
 const router = createRouter({
   scrollBehavior(to, from, savedPosition) {
@@ -12,6 +14,9 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: HomeView,
+      meta: {
+        title: "Betway X DevConf",
+      },
     },
     {
       path: "/careers/:id",
@@ -22,6 +27,17 @@ const router = createRouter({
       component: () => import("../views/careers/index.vue"),
     },
   ],
+});
+
+router.beforeEach((to, from, next) => {
+  const title = to.meta.title;
+  const { params } = to;
+  if (title) document.title = title;
+  if (params.id) {
+    const career = dataJobs.find(({ key }) => params.id === key);
+    if (career.title) document.title = `${career.company} - ${career.title}`;
+  }
+  next();
 });
 
 export default router;

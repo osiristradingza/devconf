@@ -1,18 +1,22 @@
 <template>
-  <div class="container mx-2">
-    <CareerTitle :key="career.id"
-      >{{ career.title }}
-      <template #company
-        >{{ career.company }} > {{ career.department }}</template
-      >
-      <template #logo> <img :src="logo" alt="" class="h-12" /> </template>
-    </CareerTitle>
-    <component :is="career.component" :key="career.id" />
+  <div class="container">
+    <div class="mx-2">
+      <CareerTitle :key="career.id"
+        >{{ career.title }}
+        <template #company
+          >{{ career.company }} > {{ career.department }}</template
+        >
+        <template #logo>
+          <img :src="logo" alt="" class="h-12 hidden md:block" />
+        </template>
+      </CareerTitle>
+      <component :is="career.component" :key="career.id" />
 
-    <div class="w-full font-black text-white text-2xl my-4">Apply now:</div>
-    <CareerApply />
-    <div class="w-full font-black text-white text-2xl my-4">More Careers</div>
-    <CareerCarousel />
+      <div class="w-full font-black text-white text-2xl my-4">Apply now:</div>
+      <CareerApply :career="career" />
+      <div class="w-full font-black text-white text-2xl my-4">More Careers</div>
+      <CareerCarousel />
+    </div>
   </div>
 </template>
 
@@ -28,7 +32,7 @@ const career = computed(() => {
   return dataJobs.find(({ key }) => key === route.params.id);
 });
 const logo = computed(() =>
-  career.company === "Osiris Trading"
+  career.value.company === "Osiris Trading"
     ? "/src/assets/osiris.png"
     : "/src/assets/ragingriver.webp"
 );
