@@ -21,5 +21,8 @@ export default defineConfig({
     },
     extensions: [".js", ".json", ".jsx", ".mjs", ".ts", ".tsx", ".vue"],
   },
-  base: process.env.NODE_ENV === "production" ? "/devconf/" : "/",
+  // base: process.env.NODE_ENV === "production" ? "/devconf/" : "/",
+  build: {
+    outDir: "./docs",
+  },
 });
